@@ -1,0 +1,3 @@
+#!/bin/bash 
+
+Error=$(dialog --title "Error!" --msgbox "You have un error, Restart script and try again")
