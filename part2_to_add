@@ -3,17 +3,17 @@
 change_apt() {
 new_package_manager=$(dialog --title "Write here command to update system" --inputbox "for example pacman -Suy" 10 50 3 2&1 >/dev/tty)
 #Will be wrong...
-dialog --title "package manager was selected" --msgbox "echo '$new_package_manager' "
+dialog --title "package manager was selected" --msgbox "$new_package_manager"
 }
 
 Error=$(dialog --title "Error!" --msgbox "You have un error, Restart script and try again" 2>&1 >/dev/tty) 
-menu_main2=$(dialog --menu "Is advanset options for MENU" \
-  1 "Edit pakcage manager" \
+menu_main2=$(dialog --menu "Is advanсet options for MENU" \
+  1 "Edit package manager" \
   2 "Restart program" \
   3 "Exit to main menu" 10 50 3 2>&1 > /dev/tty) 
-case menu_main in 
-  1) change_apt
-  2) exit 0 && ./Aix.sh
+case $menu_main in 
+  1) change_apt ;;;
+  2) ./Aix.sh ;;; 
   3) menu_main 
 esac 
 clear 
